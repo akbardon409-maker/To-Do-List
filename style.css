@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background: #080f1e;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px;
+    border: 1px solid #293b60;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #172238, #0c1424);
+    box-shadow: 0 20px 60px #0006;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #8460ff;
+    border-radius: 14px;
+    color: #8b72ff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(28px, 5vw, 40px);
+}
+
+h1 span {
+    color: #9a65ff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a0aec7;
+    margin: 15px 0 30px;
+}
+
+.input-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    color: white;
+    font-size: 16px;
+    border: 2px solid #6952e9;
+    border-radius: 14px;
+    outline: none;
+    background: #202c41;
+}
+
+input:focus {
+    border-color: #b06aff;
+    box-shadow: 0 0 12px #8757ff55;
+}
+
+button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(100deg, #a33df4, #347cff);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px #7651ff66;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 16px;
+    border: 1px solid #25354f;
+    border-radius: 14px;
+    background: #1b293e;
+    overflow-wrap: anywhere;
+    animation: appear 0.3s ease;
+}
+
+li span {
+    flex: 1;
+}
+
+li .delete {
+    padding: 9px 12px;
+    background: #6c2947;
+    flex-shrink: 0;
+}
+
+li.done span {
+    text-decoration: line-through;
+    color: #8592a9;
+}
+
+.footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #29374e;
+    color: #a6b4ca;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 22px 16px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
